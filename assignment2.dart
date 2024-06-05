@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:io';
 
 void main() {
   //Qno 1
@@ -69,7 +70,7 @@ void main() {
   // Qno8//
   String studentName = "razzaq";
   num studentRollNumber = 028898;
-  String studentClass = "matric" ;
+  String studentClass = "matric";
   num totalMarks = 500;
   num sub1 = 70;
   num sub2 = 50;
@@ -81,53 +82,49 @@ void main() {
   num percentage = (obtainedMarks / totalMarks) * 100;
   String grade = "";
 
-  if(percentage>=40 ){
+  if (percentage >= 40) {
     grade = "D";
-} else if(percentage>=40){
-  grade = "C";
- }
-else if(percentage>=40){
-  grade = "B";
+  } else if (percentage >= 40) {
+    grade = "C";
+  } else if (percentage >= 40) {
+    grade = "B";
+  } else {
+    grade = "A";
   }
-else{
-  grade = "A";
- }
 
   print("Student Name: $studentName");
-   print("studentRollNumber : $studentRollNumber");
-    print("studentClass : $studentClass");
-     print("percentage: $percentage");
-      print("grade : $grade");
+  print("studentRollNumber : $studentRollNumber");
+  print("studentClass : $studentClass");
+  print("percentage: $percentage");
+  print("grade : $grade");
 
 //Qno 9
-  num mynumber =10;
+  num mynumber = 10;
 
-if(mynumber % 2 == 0){
-  print("Even");
-  if(mynumber % 5 ==0){
-  print("Divisible by 5");
+  if (mynumber % 2 == 0) {
+    print("Even");
+    if (mynumber % 5 == 0) {
+      print("Divisible by 5");
+    } else {
+      print("NOT Divisible by 5");
+    }
+  } else {
+    print("Odd");
   }
-  else{
-    print("NOT Divisible by 5");
-  }
-}
-else{
-  print("Odd");
-}
 //Q10
-int n1,n2,n3
-stdout.write("enter three number");
-n1 = int.perse(stdin.readlinesycn()!);
-n2 = int.perse(stdin.readlinesycn()!);
-n3 = int.perse(stdin.readlinesycn()!);
+  int n1, n2, n3;
+  print("enter three number");
+  n1 = int.parse(stdin.readLineSync()!);
+  n2 = int.parse(stdin.readLineSync()!);
+  n3 = int.parse(stdin.readLineSync()!);
 
-if(n1>n2 && n1>n3){
-  print("this is largest $n1");
+  if (n1 > n2 && n1 > n3) {
+    print("this is largest $n1");
   }
-  if(n2>n1 && n2>n3){
-  print("this is largest $n2");
-}
-if(n3>n2 && n3>n1){
-  print("this is largest $n3");
-}
+  if (n2 > n1 && n2 > n3) {
+    print("this is largest $n2");
+  }
+  if (n3 > n2 && n3 > n1) {
+    print("this is largest $n3");
+  }
 }
